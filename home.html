@@ -6,110 +6,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://kit.fontawesome.com/536c9c2fbc.js" crossorigin="anonymous"></script>
-</head>
-<style>
-    header{
-        width: 100%;
-        height: 124px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        border: 1px solid red;
-    }
-    #leftheader{
-        display: flex;
-        gap: 30px;
-        margin:auto;
-        margin-left: 50px;
-        /* border: 1px solid red; */
-        padding: 5px;
-    }
-    #search{
-        display: flex;
-        padding-bottom: 5px;
-        border-bottom: 1px solid black;
-       
-    }
-    #searchbar{
-        display: block;
-        height: 100%;
-        border: none;
-    }
-    #logo{
-        margin: auto;
-    }
-    #logo>img{
-        width: 110px;
-        margin: auto;
-        cursor: pointer;
-    }
-    #rightheader{
-        /* border: 1px solid red; */
-        margin-right: 50px;
-        margin: auto;
-        margin-right: 30px;
-    }
-    #rightheader>ul{
-        display: flex;
-        flex-direction: row;
-        gap: 40px;
-        margin: auto;
-        list-style-type: none;
-
-    }
-    li>div{
-        /* border: 1px solid red; */
-        padding: 10px 5px;
-        margin: auto;
-        cursor: pointer;
-    }
-    li>div:hover{
-        border-bottom: 1px solid black;
-    }
-    #options{
-        cursor: pointer;
-    }
     
-</style>
+</head>
+<link rel="stylesheet" href="/styles/navbar.css">
+<link rel="stylesheet" href="/styles/home.css">
 <body>
     <header>
-        <div id="leftheader">
-            <div id="options">
-                <i class="fa-solid fa-bars fa-2x"></i>    
-            </div>
-            <div id="search">
-                <i class="fa-solid fa-magnifying-glass fa-2x"></i>
-                <input id="searchbar" type="search">
-            </div>
-            
-        </div>
-        <div id="logo">
-            <img src="https://www.stpaulcollection.com/wp-content/uploads/2018/11/st-paul-collection-amenities-cb2.png" alt="">
-        </div>
-        <div id="rightheader">
-            <ul>
-                <li>
-                    <div>
-                        <i class="fa-solid fa-location-dot fa-2x"></i>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <i class="fa-solid fa-user fa-2x"></i>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <i class="fa-solid fa-heart fa-2x"></i>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <i class="fa-solid fa-cart-shopping fa-2x"></i>
-                    </div>
-                </li>
-            </ul>
-        </div>
+       <!-- importing from components(navbar) -->
     </header>
+    <div id="video">
+        <div>
+            <video width="100%" preload="auto" src="https://cb2.scene7.com/is/content/CB2/video/BrazilHomepage_v1_optimized.mp4" loop autoplay muted></video>
+        </div>
+        <div id="videotext">
+            <p id="videotextp1">BRAZILLIAN RHAPSODY</p>
+            <P id="videotextp2">SHOP THE LOOK</P>
+        </div>
+        
+    </div>
+    <div id="febarrival">
+        <div>
+            <img width="100%" src="https://cb2.scene7.com/is/image/CB2/012722_home_feb_arrivals?wid=1920&qlt=40,0&op_sharpen=1" alt="">
+        </div>
+        <div id="febarrival-text">
+            <p id="febtext1">FEBRAURY</p>
+            <p id="febtext1">ARRIVALS</p>
+            <p id="febtext3">SHOP NOW</p>
+        </div>
+    </div>
+    <div id="newtosale">
+        <div>
+            <img width="100%" src="https://cb2.scene7.com/is/image/CB2/012722_home_sale?wid=1920&qlt=40,0&op_sharpen=1" alt="">
+        </div>
+        <div id="newtosaletext">
+            <p id="newtext1">NEW TO SALE</p>
+            <p id="newtext2">UP TO 60% OFF</p>
+        </div>
+    </div>
+    <div id="backinstock">
+        <div>
+            <img width="100%" src="https://cb2.scene7.com/is/image/CB2/012722_home_stock?wid=1920&qlt=40,0&op_sharpen=1" alt="">
+        </div>
+        <div id="backinstock-text">
+            <p id="newtext1">BACK IN STOCK</p>
+            <p id="newtext2">SHOP NOW</p>
+        </div>
+    </div>
+    <div id="radar">
+        <h3>ON OUR RADAR</h3>
+        <div id="radar-container">
+            <!-- get from dom -->
+        </div>
+    </div>
 </body>
 </html>
+
+<script type="module">
+
+    import navbar from './components/navbar.js'
+    document.querySelector("header").innerHTML=navbar();
+
+    let arr = [
+        {
+            image : "https://cb2.scene7.com/is/image/CB2/011922_home_bt_2?wid=740&qlt=50",
+            title : "SO GOOD THEY ALREADY SOLD OUT ONCE",
+            desc : "shop back in stock"
+        },
+
+        {
+            image : "https://cb2.scene7.com/is/image/CB2/021822_home_bt_2?wid=740&qlt=50",
+            title : "The rattan resurgence isn’t ending anytime soon",
+            desc : "shop the story"
+        },
+
+        {
+            image : "https://cb2.scene7.com/is/image/CB2/021822_home_bt_3?wid=740&qlt=50",
+            title : "ENTER THE LUSH, DREAMLIKE WORLD OF FINE ARTIST KRISTEN GIORGI",
+            desc : "shop now"
+        },
+
+        {
+            image : "https://cb2.scene7.com/is/image/CB2/021822_home_bt_4?wid=740&qlt=60",
+            title : "CB2 in your space: Photo by @ANGELAGRACEDESIGN",
+            desc : "see all #mycb2"
+        }
+
+    ]
+
+    arr.forEach((el)=>{
+        let {image,title,desc} = el;
+        
+        let div = document.createElement("div");
+
+        let photo = document.createElement("img");
+        photo.src=image;
+
+        let title1 = document.createElement("p");
+        title1.id="radar-title";
+        title1.textContent = title;
+
+        let desc1 = document.createElement("p");
+        desc1.id="radar-underline";
+        desc1.textContent = desc;
+
+        div.append(photo,title1,desc1);
+
+        document.getElementById("radar-container").append(div);
+    })
+
+
+
+
+</script>
+
+
