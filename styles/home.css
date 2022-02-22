@@ -8,16 +8,16 @@
     display: block;
     width: 100%;
     position: absolute;
-    top: 0%;
+    top: 35%;
     text-align: center;
     height: 900px;
 }
 #videotextp1{
-    letter-spacing: 0.2em;
+    letter-spacing: 0.3em;
     font-family: "Bodoni Sans Regular",Calibri,Helvetica,Arial,sans-serif;
     font-weight: 300;
     color: black;
-    font-size: 60px;
+    font-size: 40px;
     z-index: 10;
 }
 #videotextp2{
@@ -25,8 +25,8 @@
     display: inline;
     letter-spacing: 0.05em;
     font-family: "Lineto Brown Sub", "Lineto Brown Light Sub", Verdana, sans-serif;
-    font-weight: 300;
-    color: brown;
+    font-weight: 100;
+    color: rgb(87, 83, 83);
     font-size: 20px;
     border-bottom: 1px solid #222;
 }
