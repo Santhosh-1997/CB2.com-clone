@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/536c9c2fbc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/navbar.css">
+</head>
+<style>
+    
+    #user-div{
+        margin-top: 12px;
+        z-index: 999;
+        border: 1px solid red;
+        position: absolute;
+        left: 1200px;
+        top: 100px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        margin: 0px;
+        padding: 36px 25px;
+        letter-spacing: 2px;
+        color: rgb(126, 126, 126);
+        font-family: "Bodoni Sans Regular",Calibri,Helvetica,Arial,sans-serif;
+        font-size: 14px;
+        display: none;
+    }
+    #user-div>div, #whishlist-div>div{
+        margin-bottom: 10px;
+    }
+
+    #user:hover #user-div {
+        display: block;
+        z-index: 10;
+        
+    }
+
+    #whishlist-div{
+        width: 10%;
+        margin-top: 12px;
+        z-index: 999;
+        border: 1px solid red;
+        position: absolute;
+        left: 1280px;
+        top: 100px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        margin: 0px;
+        padding: 36px 25px;
+        letter-spacing: 2px;
+        color: rgb(126, 126, 126);
+        font-family: "Bodoni Sans Regular",Calibri,Helvetica,Arial,sans-serif;
+        font-size: 14px;
+        display: none;
+    }
+
+    #whishlist:hover #whishlist-div{
+        display: block;
+    }
+
+</style>
+<body>
+    <header>
+        <div id="leftheader">
+            <div id="options">
+                <i class="fa-solid fa-bars fa-2x"></i>    
+            </div>
+            <div id="search">
+                <i class="fa-solid fa-magnifying-glass fa-2x"></i>
+                <input id="searchbar" type="search">
+            </div>
+            
+        </div>
+        <div id="logo">
+            <img src="https://www.stpaulcollection.com/wp-content/uploads/2018/11/st-paul-collection-amenities-cb2.png" alt="">
+        </div>
+        <div id="rightheader">
+            <ul>
+                <li>
+                    <div>
+                        <i class="fa-solid fa-location-dot fa-2x"></i>
+                    </div>
+                </li>
+                <li>
+                    <div id="user">
+                        <i class="fa-solid fa-user fa-2x"></i>
+                        <div aria-hidden="true" id="user-div">
+                            <div>SIGN IN</div>
+                            <div>ORDER TRACKING</div>
+                            <div>SCHEDULE DELIVERY</div>
+                            <div>CB2 CREDIT CARD</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div id="whishlist">
+                        <i class="fa-solid fa-heart fa-2x"></i>
+                        <div aria-hidden="true" id="whishlist-div">
+                            <div>SOMETHING CATCHING YOUR EYE?</div>
+                            <div>
+                                <span style="text-decoration: underline;">Sign in</span> to see items you may have added using another computer or device.
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <i class="fa-solid fa-cart-shopping fa-2x"></i>
+                        <span id ="cart-count"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+</body>
+</html>
