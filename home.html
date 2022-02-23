@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/536c9c2fbc.js" crossorigin="anonymous"></script>
+    
+</head>
+<link rel="stylesheet" href="/styles/navbar.css">
+<link rel="stylesheet" href="/styles/home.css">
+<link rel="stylesheet" href="/styles/footer.css">
+<body>
+    <header>
+       <!-- importing from components(navbar) -->
+    </header>
+    <div id="video">
+        <div>
+            <video width="100%" preload="auto" src="https://cb2.scene7.com/is/content/CB2/video/BrazilHomepage_v1_optimized.mp4" loop autoplay muted></video>
+        </div>
+        <div id="videotext">
+            <p id="videotextp1">BRAZILLIAN RHAPSODY</p>
+            <P id="videotextp2">SHOP THE LOOK</P>
+        </div>
+        
+    </div>
+    <div id="febarrival">
+        <div>
+            <img width="100%" src="https://cb2.scene7.com/is/image/CB2/012722_home_feb_arrivals?wid=1920&qlt=40,0&op_sharpen=1" alt="">
+        </div>
+        <div id="febarrival-text">
+            <p id="febtext1">FEBRAURY</p>
+            <p id="febtext1">ARRIVALS</p>
+            <p id="febtext3">SHOP NOW</p>
+        </div>
+    </div>
+    <div id="newtosale">
+        <div>
+            <img width="100%" src="https://cb2.scene7.com/is/image/CB2/012722_home_sale?wid=1920&qlt=40,0&op_sharpen=1" alt="">
+        </div>
+        <div id="newtosaletext">
+            <p id="newtext1">NEW TO SALE</p>
+            <p id="newtext2">UP TO 60% OFF</p>
+        </div>
+    </div>
+    <div id="backinstock">
+        <div>
+            <img width="100%" src="https://cb2.scene7.com/is/image/CB2/012722_home_stock?wid=1920&qlt=40,0&op_sharpen=1" alt="">
+        </div>
+        <div id="backinstock-text">
+            <p id="newtext1">BACK IN STOCK</p>
+            <p id="newtext2">SHOP NOW</p>
+        </div>
+    </div>
+    <div id="radar">
+        <h3>ON OUR RADAR</h3>
+        <div id="radar-container">
+            <!-- get from dom -->
+        </div>
+    </div>
+    <footer>
+        <div id="footer-content">
+            <div id="footer-topleft">
+                <div style="font-weight: 530;">KNOW WHAT'S UP. SIGN UP FOR EMAILS.</div>
+                <div>
+                    <input type="email" placeholder="Enter your email address">
+                </div>
+                <div style="margin-left: 10px; color: rgb(128, 124, 124);;">
+                    Read our <span style="text-decoration: underline;">Privacy Policy</span>
+                </div>
+                <div id="footer-icons">
+                    <div><i class="fa-brands fa-facebook-f"></i></div>
+                    <div><i class="fa-brands fa-twitter"></i></div>
+                    <div><i class="fa-brands fa-pinterest-p"></i></div>
+                    <div><i class="fa-brands fa-instagram"></i></div>
+                    <div><i class="fa-brands fa-youtube"></i></div>
+                </div>
+            </div>
+            <div id="footer-topright">
+                <div id="ftr1">
+                    <div>
+                        <span>CONTACT US</span>
+                        <ul>
+                            <li>CUSTOMER SERVICE</li>
+                            <li>SERVICES</li>
+                            <li>STORES</li>
+                            <li>800.606.6252</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <span>CB2 CREDIT CARD</span>
+                        <ul>
+                            <li>APPLY NOW</li>
+                            <li>MANAGE ACCOUNT</li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div id="ftr2">
+                    <div>
+                        <span>ORDER TRACKING & SCHEDULE DELIVERY</span>
+                        <ul>
+                            <li>TRACK YOUR ORDER</li>
+                            <li>SCHEDULE DELIVERY</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <span>OUR COMPANY</span>
+                        <ul>
+                            <li>ABOUT US</li>
+                            <li>CAREERS</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="ftr3">
+                    <div>
+                        <span>RESOURCES</span>
+                        <ul>
+                            <li>MY ACCOUNT</li>
+                            <li>RETURN POLICY</li>
+                            <li>SHIPPING INFORMATION</li>
+                            <li>EMAIL PREFERENCES</li>
+                            <li>CATALOGS</li>
+                            <li>GIFT REGISTRY</li>
+                            <li>GIFT CARDS</li>
+                            <li>CB2 INTERIORS</li>
+                            <li>TRADE PROGRAMS</li>
+                            <li>PRODUCT RECALLS</li>
+                            <li>ACESSIBLITY STATEMENT</li>
+                            <li>CA SUPPLY CHAINS ACT</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="ftr4">
+                    <div>OUR BRANDS</div>
+                    <div style="font-weight: bold; font-size: 25px;">Crate&Barrel</div>
+                    <div style="font-weight: bold; font-size: 18px;">Crate&kids</div>
+                    <div style="font-weight: 500;">HUDSON | GRACE</div>
+                    <div style="font-size: 14px; margin-top: 45px;">SHIP TO: <span style="margin-left: 10px;"><i class="fa-solid fa-flag-usa"></i></span> </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+<script type="module">
+
+    import navbar from './components/navbar.js'
+    document.querySelector("header").innerHTML=navbar();
+
+    let arr = [
+        {
+            image : "https://cb2.scene7.com/is/image/CB2/011922_home_bt_2?wid=740&qlt=50",
+            title : "SO GOOD THEY ALREADY SOLD OUT ONCE",
+            desc : "shop back in stock"
+        },
+
+        {
+            image : "https://cb2.scene7.com/is/image/CB2/021822_home_bt_2?wid=740&qlt=50",
+            title : "The rattan resurgence isn’t ending anytime soon",
+            desc : "shop the story"
+        },
+
+        {
+            image : "https://cb2.scene7.com/is/image/CB2/021822_home_bt_3?wid=740&qlt=50",
+            title : "ENTER THE LUSH, DREAMLIKE WORLD OF FINE ARTIST KRISTEN GIORGI",
+            desc : "shop now"
+        },
+
+        {
+            image : "https://cb2.scene7.com/is/image/CB2/021822_home_bt_4?wid=740&qlt=60",
+            title : "CB2 in your space: Photo by @ANGELAGRACEDESIGN",
+            desc : "see all #mycb2"
+        }
+
+    ]
+
+    arr.forEach((el)=>{
+        let {image,title,desc} = el;
+        
+        let div = document.createElement("div");
+
+        let photo = document.createElement("img");
+        photo.src=image;
+
+        let title1 = document.createElement("p");
+        title1.id="radar-title";
+        title1.textContent = title;
+
+        let desc1 = document.createElement("p");
+        desc1.id="radar-underline";
+        desc1.textContent = desc;
+
+        div.append(photo,title1,desc1);
+
+        document.getElementById("radar-container").append(div);
+    })
+
+
+
+
+</script>
+
+
