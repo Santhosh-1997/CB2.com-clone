@@ -33,6 +33,7 @@ function navbar(){
         <li>
             <div>
                 <i class="fa-solid fa-cart-shopping fa-2x"></i>
+                <span id ="cart-count"></span>
             </div>
         </li>
     </ul>
