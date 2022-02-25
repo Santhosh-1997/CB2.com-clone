@@ -22,9 +22,10 @@ function navbar(){
                 </li>
                 <li>
                     <div id="user">
-                        <i class="fa-solid fa-user fa-2x"></i>
+                        <i class="fa-solid fa-user fa-2x">
+                         </i>
                         <div aria-hidden="true" id="user-div">
-                            <div>SIGN IN</div>
+                            <div> <a href="login.html" >sign in</a></div>
                             <div>ORDER TRACKING</div>
                             <div>SCHEDULE DELIVERY</div>
                             <div>CB2 CREDIT CARD</div>
