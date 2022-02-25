@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/536c9c2fbc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/styles/footer.css">
+     
+    <link rel="stylesheet" href="/styles/navbar.css">
+    <style>
+        #main{
+            display: flex;
+
+        }
+        #box1{
+            width: 20%;
+            height:40%;
+            margin-top: 3%;
+    
+        margin-left:28%;
+        
+        }
+        #box2{
+            width: 25%;
+            height: auto;
+            border: 2px solid rgb(197, 24, 24);
+    
+            margin: auto;
+        }
+        .vl {
+            margin-left: 50px;
+            margin-top: 7%;
+  border-left: 2px solid rgb(227,227,227);
+  height: 400px;
+}
+#btn{
+    background-color: black;
+    width: 100%;
+    color: white;
+    font-size: larger;
+}
+#p{
+    width: 100%;
+    display: flex;
+    border: 2px solid black;
+}
+#usr{
+    width: 90%;
+
+    border: 2px solid black;
+    margin-bottom: 5%;
+
+}
+#pass{
+    width: 90%;
+
+    border: 2px solid black;
+    margin-bottom: 5%;
+
+}
+a{
+    color:rgba(22, 21, 21, 0.904);
+}
+
+    </style>
+</head>
+<body>
+    
+<div>
+    
+    <header>
+        <div id="leftheader">
+            <div id="options">
+                <i class="fa-solid fa-bars fa-2x"></i>    
+            </div>
+            <div id="search">
+                <i class="fa-solid fa-magnifying-glass fa-2x"></i>
+                <input id="searchbar" type="search">
+            </div>
+            
+        </div>
+        <div id="logo">
+            <img src="https://www.stpaulcollection.com/wp-content/uploads/2018/11/st-paul-collection-amenities-cb2.png" alt="">
+        </div>
+        <div id="rightheader">
+            <ul>
+                <li>
+                    <div>
+                        <i class="fa-solid fa-location-dot fa-2x"></i>
+                    </div>
+                </li>
+                <li>
+                    <div id="user">
+                        <i class="fa-solid fa-user fa-2x">
+                         </i>
+                        <div aria-hidden="true" id="user-div">
+                    
+                            <div>ORDER TRACKING</div>
+                            <div>SCHEDULE DELIVERY</div>
+                            <div>CB2 CREDIT CARD</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div id="whishlist">
+                        <i class="fa-solid fa-heart fa-2x"></i>
+                        <div aria-hidden="true" id="whishlist-div">
+                            <div>SOMETHING CATCHING YOUR EYE?</div>
+                            <div>
+                                <span style="text-decoration: underline;">Sign in</span> to see items you may have added using another computer or device.
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <i class="fa-solid fa-cart-shopping fa-2x"></i>
+                        <span id ="cart-count"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>`
+}
+
+        <!-- importing from components(navbar) -->
+     </header>
+
+     </div>
+    </div>
+     <hr style="width: 95%; bottom: rgb(210,210,210); "  >
+     <div id="main">
+         <div id="box1">
+            <div> 
+                <h3  > SIGN IN</h3>
+                <h5 style="margin-left: 70%;" > Reset password</h5>
+            </div>
+            <div>
+             <form>
+            
+ 
+                 
+                  <h4>Email</h4>
+                  <div id="name">
+ 
+
+       
+                    <input  id="usr" type="text" placeholder="Enter username" />
+                    
+                    </div>
+            
+                
+                   
+                    <h4>password</h4>
+                    
+                    <div id="name">
+     
+     
+                        <input id="pass" type="password" placeholder="Enter password" />
+                   
+                      </div>
+                  
+                  <input type="submit" id="btn" value="login"/>
+                </form>
+                  <h4 style="margin-left: 44%;">or</h4>
+                  
+                  <button id="p" type = "submit" name = "learn" value = "myimage">
+                      <img style="width: 15%;" src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13.png" alt="">
+                      <p>SIGN IN WITH GOOGLE</p>
+                   
+                      
+             
+              
+              </div>
+             <h5 style="font-size: 15px;">By signing in, you are agreeing to our <a href="https://www.cb2.com/customer-service/terms-of-use">Terms of use</a> and <a href="https://www.cb2.com/customer-service/terms-of-use">Privacy Policy.</a></h5>
+                
+             
+
+
+         </div>
+         <div class="vl"></div>
+
+         <div id="box2">
+
+         </div>
+
+
+
+     </div>
+   
+    
+</body>
+
+</html>
+
+<script>
+    
+
+
+  document.querySelector("form").addEventListener("submit", signin);
+
+  var regdUsers = JSON.parse(localStorage.getItem("userDataBase"));
+
+  function signin(event) {
+    event.preventDefault();
+    var pass = document.querySelector("#pass").value;
+    var user = document.querySelector("#usr").value;
+
+    for (var i = 0; i < regdUsers.length; i++) {
+      console.log(regdUsers[i].userName, regdUsers[i].passwd);
+      if (regdUsers[i].userName == user && regdUsers[i].passwd == pass) {
+        alert("login success");
+        window.location.href = "home.html";
+      }
+    }
+  }
+
+</script>
