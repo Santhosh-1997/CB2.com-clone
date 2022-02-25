@@ -11,8 +11,62 @@
     <link rel="stylesheet" href="/styles/navbar.css">
     <link rel="stylesheet" href="/styles/home.css">
     <link rel="stylesheet" href="/styles/footer.css">
-     
+
     <link rel="stylesheet" href="/styles/light.css">
+    <style>
+        #sidebar{
+    /* position: absolute; */
+    overflow-y: scroll;
+    width: 15%;
+    height: 700px;
+    /* border: 1px solid black; */
+    padding:30px;
+    color:#222222;
+color:rgb(34, 34, 34);
+font-size:13px;
+line-height:20px;
+vertical-align:baseline;
+letter-spacing:1.12px;
+word-spacing:0px;
+margin:13px 0px 0px;
+padding:0px 20 0px 50px;
+font-weight:300;
+font-family :"Lineto Brown Sub", "Lineto Brown Light Sub", Verdana, sans-serif;
+
+line-height: 25px;
+
+font-weight:300;
+font-style:normal;
+font-variant:normal;
+text-transform:none;
+text-decoration:none solid rgb(34, 34, 34);
+text-align:start text-inden;
+
+}
+#sidebar p ,li{
+    cursor: pointer;
+}
+
+#sidebar p:nth-child(19){
+color:red
+}
+
+#sidebar p:hover{
+    border-bottom: 1px solid black;
+width: max-content;
+}
+li{
+    font-size: 11px;
+}
+li:hover{
+    border-bottom: 1px solid black;
+    width: max-content;  
+}
+
+hr{
+    color: gray;
+}
+    </style>
 </head>
 
 <body>
@@ -26,113 +80,14 @@
     
     <div id="sub" >
     <div id="sidebar" >
-        <div id="sidebox">
-            <div onclick="window.location.href=''">NEW</div>
-            <div onclick="window.location.href=''">FURNITURE</div>
-            <div onclick="window.location.href=''">DECOR & MIRRORS</div>
-            <div onclick="window.location.href=''">LIGHTNING</div>
-            <div onclick="window.location.href=''">PILLOWS AND THROWS</div>
-            <div onclick="window.location.href=''">RUGS</div>
-            <div onclick="window.location.href=''">KITCHEN & DINING</div>
-            <div onclick="window.location.href=''">BEDDING & BATH</div>
-            <div onclick="window.location.href=''">OUTDOOR</div>
-            <div onclick="window.location.href=''">GIFTS</div>
-            <div onclick="window.location.href=''">SALE & OFFERS</div>
-            <div onclick="window.location.href=''">KRAVITZ DESIGN</div>
-            <div onclick="window.location.href=''">-</div>
-            <div style="color: rgb(138, 135, 135);" onclick="window.location.href=''">COLLABORATIONS</div>
-            <div style="color: rgb(138, 135, 135);" onclick="window.location.href=''">IDEAS & INSPIRATION</div>
-            <div style="color: rgb(138, 135, 135);" onclick="window.location.href=''">FREE DESIGN SERVICES</div>
-            <div style="color: rgb(138, 135, 135);" onclick="window.location.href=''">TRADE PROGRAM</div>
-        </div>
-    </div>
+        <sidebar>
+            
+        </sidebar>
+      </div>
     <div id="container"></div>
 </div>
 <footer>
-    <div id="footer-content">
-        <div id="footer-topleft">
-            <div style="font-weight: 530;">KNOW WHAT'S UP. SIGN UP FOR EMAILS.</div>
-            <div>
-                <input type="email" placeholder="Enter your email address">
-            </div>
-            <div style="margin-left: 10px; color: rgb(128, 124, 124);;">
-                Read our <span style="text-decoration: underline;">Privacy Policy</span>
-            </div>
-            <div id="footer-icons">
-                <div><i class="fa-brands fa-facebook-f"></i></div>
-                <div><i class="fa-brands fa-twitter"></i></div>
-                <div><i class="fa-brands fa-pinterest-p"></i></div>
-                <div><i class="fa-brands fa-instagram"></i></div>
-                <div><i class="fa-brands fa-youtube"></i></div>
-            </div>
-        </div>
-        <div id="footer-topright">
-            <div id="ftr1">
-                <div>
-                    <span>CONTACT US</span>
-                    <ul>
-                        <li>CUSTOMER SERVICE</li>
-                        <li>SERVICES</li>
-                        <li>STORES</li>
-                        <li>800.606.6252</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <span>CB2 CREDIT CARD</span>
-                    <ul>
-                        <li>APPLY NOW</li>
-                        <li>MANAGE ACCOUNT</li>
-                    </ul>
-                </div>
-
-            </div>
-            <div id="ftr2">
-                <div>
-                    <span>ORDER TRACKING & SCHEDULE DELIVERY</span>
-                    <ul>
-                        <li>TRACK YOUR ORDER</li>
-                        <li>SCHEDULE DELIVERY</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <span>OUR COMPANY</span>
-                    <ul>
-                        <li>ABOUT US</li>
-                        <li>CAREERS</li>
-                    </ul>
-                </div>
-            </div>
-            <div id="ftr3">
-                <div>
-                    <span>RESOURCES</span>
-                    <ul>
-                        <li>MY ACCOUNT</li>
-                        <li>RETURN POLICY</li>
-                        <li>SHIPPING INFORMATION</li>
-                        <li>EMAIL PREFERENCES</li>
-                        <li>CATALOGS</li>
-                        <li>GIFT REGISTRY</li>
-                        <li>GIFT CARDS</li>
-                        <li>CB2 INTERIORS</li>
-                        <li>TRADE PROGRAMS</li>
-                        <li>PRODUCT RECALLS</li>
-                        <li>ACESSIBLITY STATEMENT</li>
-                        <li>CA SUPPLY CHAINS ACT</li>
-                    </ul>
-                </div>
-            </div>
-            <div id="ftr4">
-                <div>OUR BRANDS</div>
-                <div style="font-weight: bold; font-size: 25px;">Crate&Barrel</div>
-                <div style="font-weight: bold; font-size: 18px;">Crate&kids</div>
-                <div style="font-weight: 500;">HUDSON | GRACE</div>
-                <div style="font-size: 14px; margin-top: 45px;">SHIP TO: <span style="margin-left: 10px;"><i class="fa-solid fa-flag-usa"></i></span> </div>
-            </div>
-        </div>
-    </div>
-</footer>
+   
 </div>
 
 
@@ -142,6 +97,14 @@
 <script type="module">
        import navbar from './components/navbar.js'
     document.querySelector("header").innerHTML=navbar();
+
+
+    import footer from './components/footer.js'
+    document.querySelector("footer").innerHTML=footer();
+
+
+    import sidebar from './components/sidebar.js'
+    document.querySelector("sidebar").innerHTML=sidebar();
 
      var pro = [
         {
