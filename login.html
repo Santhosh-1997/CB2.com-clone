@@ -7,122 +7,17 @@
     <title>Document</title>
     <script src="https://kit.fontawesome.com/536c9c2fbc.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/login.css">
+
      
     <link rel="stylesheet" href="/styles/navbar.css">
-    <style>
-        #main{
-            display: flex;
-
-        }
-        #box1{
-            width: 20%;
-            height:40%;
-            margin-top: 3%;
-    
-        margin-left:28%;
-        
-        }
-        #box2{
-            width: 25%;
-            height: auto;
-            border: 2px solid rgb(197, 24, 24);
-    
-            margin: auto;
-        }
-        .vl {
-            margin-left: 50px;
-            margin-top: 7%;
-  border-left: 2px solid rgb(227,227,227);
-  height: 400px;
-}
-#btn{
-    background-color: black;
-    width: 100%;
-    color: white;
-    font-size: larger;
-}
-#p{
-    width: 100%;
-    display: flex;
-    border: 2px solid black;
-}
-#usr{
-    width: 90%;
-
-    border: 2px solid black;
-    margin-bottom: 5%;
-
-}
-#pass{
-    width: 90%;
-
-    border: 2px solid black;
-    margin-bottom: 5%;
-
-}
-a{
-    color:rgba(22, 21, 21, 0.904);
-}
-
-    </style>
 </head>
 <body>
     
 <div>
     
     <header>
-        <div id="leftheader">
-            <div id="options">
-                <i class="fa-solid fa-bars fa-2x"></i>    
-            </div>
-            <div id="search">
-                <i class="fa-solid fa-magnifying-glass fa-2x"></i>
-                <input id="searchbar" type="search">
-            </div>
-            
-        </div>
-        <div id="logo">
-            <img src="https://www.stpaulcollection.com/wp-content/uploads/2018/11/st-paul-collection-amenities-cb2.png" alt="">
-        </div>
-        <div id="rightheader">
-            <ul>
-                <li>
-                    <div>
-                        <i class="fa-solid fa-location-dot fa-2x"></i>
-                    </div>
-                </li>
-                <li>
-                    <div id="user">
-                        <i class="fa-solid fa-user fa-2x">
-                         </i>
-                        <div aria-hidden="true" id="user-div">
-                    
-                            <div>ORDER TRACKING</div>
-                            <div>SCHEDULE DELIVERY</div>
-                            <div>CB2 CREDIT CARD</div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div id="whishlist">
-                        <i class="fa-solid fa-heart fa-2x"></i>
-                        <div aria-hidden="true" id="whishlist-div">
-                            <div>SOMETHING CATCHING YOUR EYE?</div>
-                            <div>
-                                <span style="text-decoration: underline;">Sign in</span> to see items you may have added using another computer or device.
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <i class="fa-solid fa-cart-shopping fa-2x"></i>
-                        <span id ="cart-count"></span>
-                    </div>
-                </li>
-            </ul>
-        </div>`
-}
+   
 
         <!-- importing from components(navbar) -->
      </header>
@@ -134,26 +29,15 @@ a{
          <div id="box1">
             <div> 
                 <h3  > SIGN IN</h3>
-                <h5 style="margin-left: 70%;" > Reset password</h5>
+                <h5 style="margin-left: 60%;" > Reset password</h5>
             </div>
             <div>
-             <form>
-            
- 
-                 
+             <form> 
                   <h4>Email</h4>
                   <div id="name">
- 
-
-       
-                    <input  id="usr" type="text" placeholder="Enter username" />
-                    
+       <input  id="usr" type="text" placeholder="Enter username" />
                     </div>
-            
-                
-                   
-                    <h4>password</h4>
-                    
+                    <h4>password</h4> 
                     <div id="name">
      
      
@@ -182,38 +66,79 @@ a{
          <div class="vl"></div>
 
          <div id="box2">
+             <h2 style="    padding: 0;
+             margin: 20px 0;
+             color: #222">CREATE AN ACCOUNT</h2>
+             <ul style="margin-top: 20%;">
+                 <li id="list" >Option to save payments to view in store orders</li>
+                 <li id="list" >Easily redeem rewards</li>
+                 <li id="list" >Speedy checkout</li>
+                 <li id="list" >Easily track and view order history </li>
+                 
+             </ul>
+              
+    <button id="btn" onclick="myfunction()">CREATE ACCOUNT</button>           
 
          </div>
 
 
 
      </div>
+     <footer>
+        <!-- importing from components(footer) -->
+</footer>
    
     
 </body>
 
 </html>
-
 <script>
+function myfunction(){
+        window.location.href = "signup.html"
+    
+    }
+</script>
+
+
+<script type="module">
+    
+    import footer from './components/footer.js'
+    document.querySelector("footer").innerHTML=footer();
+
+    import navbar from './components/navbar.js'
+    document.querySelector("header").innerHTML=navbar();
+
     
 
 
-  document.querySelector("form").addEventListener("submit", signin);
+      document.querySelector("form").addEventListener("submit", signin);
 
-  var regdUsers = JSON.parse(localStorage.getItem("userDataBase"));
+var regdUsers = JSON.parse(localStorage.getItem("userDataBase"))||[];
 
-  function signin(event) {
-    event.preventDefault();
-    var pass = document.querySelector("#pass").value;
-    var user = document.querySelector("#usr").value;
+function signin(event) {
+  event.preventDefault();
+  var pass = document.querySelector("#pass").value;
+  var user = document.querySelector("#usr").value;
+var count =0;
+  for (var i=0; i<regdUsers.length;i++) 
+  {
+    // console.log(regdUsers[i].userName, regdUsers[i].passwd);
+if ((regdUsers[i].userName == user) && (regdUsers[i].passwd == pass)) {
+count++}}
+if(count>0){
+   
+alert("login success");
+  window.location.href = "home.html"
+}
+  
 
-    for (var i = 0; i < regdUsers.length; i++) {
-      console.log(regdUsers[i].userName, regdUsers[i].passwd);
-      if (regdUsers[i].userName == user && regdUsers[i].passwd == pass) {
-        alert("login success");
-        window.location.href = "home.html";
-      }
-    }
+else {
+  alert("login fail");
+  window.location.href = "signup.html"
   }
+}
+
+
+
 
 </script>
