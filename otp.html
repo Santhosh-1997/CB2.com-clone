@@ -9,9 +9,6 @@
         <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOAAAADgCAMAAAAt85rTAAAAY1BMVEX///9WVlpRUVXPzs75+fl3d3ri4uN9fYBDQ0hMTFCJiYvJycpQUFRwcHOSkpRHR0y5ubpcXGDc3N3U1NWampxiYmZra27u7u6hoaKysrSDg4asrK7x8fJ5eXu8vL7n5+c4OD7xJQtnAAADZUlEQVR4nO3dYV+iMACA8TGhWg6IUkg89b7/pzyzuws2kIF1t63n/1YFn1/pBkwVq8gJAAAAAAAAAAAAAAAAAAAAAAAAAAC+sbR+iMnPvRWYySQiakdg2AgM3XcMzLWMSGkHFllM8qM90sfF6gMAAAAAAAAAAAAAwBf79nG+YrNfN7Ouh8+4gr5Z8ITeta8DmyvUgtUaWqtS5fsfzn2n/HCWDT0BS714YYu6HwrUSxfdSKWtVSlj7h4uT+DR5b754qVJ8nMDz8rWNbC8PIHgAhO1iTwwUevIA+Uh8sBEP0ceaC9g9DrwPMJNMPfu9qRvCJwzPE8GysfNhKLdqv7+s68NrOcspiymAvXd9P7TYz+w/tJAvbp1NWU/0OkdY6f/YeCLy0OuWRDYbCMPFN2F7FEGHmIPvCfQRGAHgfMQOIBAS2CBsQ/0aZ3EHfgS8GTb4XDpPNeWswNPiwOPdyNOLtsS5gHvbj1l36reAanMP7aVjj5qdzlKlofRO3T+dfoHvFoNK50OtM3A0c11GOcsZOfcb5OMPej3TuTY7Q+d86tu52QGz79MB86nO9cbmuoztuJZoOq8C8QYKOvOJaYYA3sfe44wUGfdE1nxvcnobdPdVnp8GrG/7EXmY7c/dV7J/gRK1bpe41080P+3QKlVkrldOnvz+dcmBk/TTwf2B3prT39vrvLi6DKtuz2w2g6rXC8uX5mLpplxGeKw+IsGlk+23Q7grrh2NJG2RmG1dHfeHE0YAWlhFCb2l2E48TVQpJt+YW9EnsHbQCHMQtUueSF6HChezb9h3dh3muJzoNgZhVKuZu/F60BxNAoT9yVcf/gdKNbmbEcPXQy/xvNAsTILVea+0vCN74HiJTGmbXo7Z6bmf6B4NguldJ9qhxAoTltz6l3OGPMDCBRNbb0Q3cf8EAJFk1tvprXr6eUgAt++JtAolJXj/sMIFOnBKtRPTnsJJFCI1pzUJKXTouZgAsWmNAtV7vBWE06geLUKZTU95gcUKPZ2YTI55vsSqFzOueztVb/K+nprw3ugnh+obg9Mqg+J23rRyiKL6y/EO33ZvNNBSNbdcHJzIAAAAAAAAAAAAAAA+DdOYx/jDpO1EDnNl3yBqrcGfoc3+l9SJjAoBIbuOwbG/3Pt9zHJFn5CFQCAqPwC1B6EAfvTPPcAAAAASUVORK5CYII="
         type="image/x-icon">
 </head>
-<link rel="stylesheet" href="/styles/navbar.css">
-
-<script src="https://kit.fontawesome.com/536c9c2fbc.js" crossorigin="anonymous"></script>
 <style>
     
     body { 
@@ -50,9 +47,6 @@ transform: translate(-50%,-50%);
 
 </style>
 <body>
-    <header>
-
-    </header>
     <div id = 'justCreatedThisDiv' style = 'margin: 0 auto;'>
         
     <div id="otp_card">
@@ -78,10 +72,9 @@ transform: translate(-50%,-50%);
     </div>
 </body>
 </html>
-<script type="module">
+<script>
 
-    import navbar from './components/navbar.js'
-    document.querySelector("header").innerHTML=navbar();
+    
 
      document.querySelector("form").addEventListener("submit",formsubmit);
  var userpile = JSON.parse(localStorage.getItem("otpdatabase"))||[];
