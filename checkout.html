@@ -195,3 +195,18 @@
     </div>
 </body>
 </html>
+
+<script>
+
+    let amount = JSON.parse(localStorage.getItem("total_value"));
+    //console.log(amount)
+    document.getElementById("amount").innerHTML="";
+    document.getElementById("amount").innerText= `$${amount}`;
+
+
+    let total = amount+249+890;
+    document.getElementById("total").innerHTML="";
+    document.getElementById("total").innerText= `$${total}`;
+
+
+</script>
