@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture</title>
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/sidebar.css">
+    <script src="https://kit.fontawesome.com/536c9c2fbc.js" crossorigin="anonymous"></script>
+    
+</head>
+<style>
+  #sidebar{
+    /* position: absolute; */
+    overflow-y: scroll;
+    width: 15%;
+    height: 700px;
+    /* border: 1px solid black; */
+    padding:30px;
+    color:#222222;
+color:rgb(34, 34, 34);
+font-size:13px;
+line-height:20px;
+vertical-align:baseline;
+letter-spacing:1.12px;
+word-spacing:0px;
+margin:13px 0px 0px;
+padding:0px 20 0px 50px;
+font-weight:300;
+font-family :"Lineto Brown Sub", "Lineto Brown Light Sub", Verdana, sans-serif;
+
+line-height: 25px;
+
+font-weight:300;
+font-style:normal;
+font-variant:normal;
+text-transform:none;
+text-decoration:none solid rgb(34, 34, 34);
+text-align:start text-inden;
+
+}
+   #container_furniture > div> img {
+        height: 300px;
+        width: 370px;
+      }
+      #mainbox{
+        display: flex;
+        margin-bottom: 75px;
+      }
+      #sidebar_box{
+        width: 25%;
+        /* border: 1px solid gray; */
+        padding-left: 15px;
+      }
+    #product{
+      width: 80%;
+      margin-left: 20px;
+      /* border: 1px solid rgb(29, 28, 28); */
+      margin-right: 0px;
+
+    }
+      #container_furniture {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        width: 98%;
+        margin: auto;
+        margin-top: 20px;
+        /* margin-right: 0px; */
+        /* overflow-x: scroll; */
+      }
+      #container_furniture > div {
+        padding: 10px;
+        /* border: 1px solid #cecece; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      #sidebar p ,li{
+    cursor: pointer;
+}
+
+#sidebar p:nth-child(19){
+color:red
+}
+
+#sidebar p:hover{
+    border-bottom: 1px solid black;
+width: max-content;
+}
+div>li{
+    font-size: 11px;
+}
+li:hover{
+    border-bottom: 1px solid black;
+    width: max-content;  
+}
+
+hr{
+    color: gray;
+}
+/* .s56f6{
+  border: 2px solid rgb(163, 160, 160);
+}
+     */
+    
+</style>
+<body>
+  <header>
+
+  </header>
+ <div id="navbar"></div>
+    <div id="mainbox">
+      <div id="sidebar_box"></div>
+      <div id="product">
+        <div id="container_furniture" ></div>
+      </div>
+    </div>
+    <hr class="s56f6">
+    <footer>
+      <!-- importing from components(footer) -->
+</footer>
+
+</body>
+</html>
+<script  >
+ var cartArr= JSON.parse(localStorage.getItem("addTocartPage"))||[];
+  
+    var data1 =[
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/ClaudeCognacSofa3QSSS22/$web_plp_card$/220222042856/ClaudeCognacSofa3QSSS22.jpg" ,
+            title:"CLAUDE COGNAC VELVET SOFA",
+            price: 2999
+            // console.log("proc:",price)
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/CB2SP22_16A_V2_RET/$web_plp_card$/220222042700/CB2SP22_16A_V2_RET.jpg" ,
+            title:"CURVO CAMEL VELVET SOFA",
+            price: 2199
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/AngoloChcltVelvetSofa3QSSS22/$web_plp_card$/220222042856/AngoloChcltVelvetSofa3QSSS22.jpg" ,
+            title:"ANGOLO ESPRESSO VELVET SOFA",
+            price:2499
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/OutlineCamelFauxMohairJN21_1x1/$web_plp_card$/220222043000/OutlineCamelFauxMohairJN21_1x1.jpg",
+            title:"PERIMETER CAMEL SOFA",
+            price: 1999
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/ClaremontIvryBclSlpSofaSHS22/$web_pdp_main_carousel_lg$/211215160847/claremont-ivory-boucle-sleeper-sofa.jpg" ,
+            title:"Zolvo sufr sofa",
+            price: 3990
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/OutlineCamelFauxMohairJN21_1x1/$web_plp_card$/220222043000/OutlineCamelFauxMohairJN21_1x1.jpg" ,
+            title:"PERIMETER CAMEL SOFA",
+            price: 1990
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/KSTGreenVelvetSofaFB21_1x1/$web_spill_item$/220222042838/KSTGreenVelvetSofaFB21_1x1.jpg" ,
+            title:"KST SOFA",
+            price:1499
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/BowtieBlackWoolSofaSHF21/$web_pdp_main_carousel_lg$/210722150048/bowtie-black-wool-sofa-model-3127.jpg",
+            title:"BOWTIE BLACK WOOL SOFA MODEL 3127",
+            price: 2990
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/CharltonMetalFrameSofaSHF21/$web_pdp_main_carousel_lg$/211004161112/charlton-metal-frame-sofa.jpg" ,
+            title:"CHARLTON SOFA",
+            price: 2590
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/AlessoSnwFldOutSlprSofaAVSHF21/$web_spill_item$/220222042539/AlessoSnwFldOutSlprSofaAVSHF21.jpg" ,
+            title:"ALESSO SNOW WHITE SLEEPER SOFA",
+            price: 2199
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/AngoloChcltVelvetSofa3QSSS22/$web_plp_card$/220222042856/AngoloChcltVelvetSofa3QSSS22.jpg" ,
+            title:"ANGOLO ESPRESSO VELVET SOFA",
+            price:2499
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/CamdenRyeVelvetSofa3QSSF21/$web_spill_item$/220222043046/CamdenRyeVelvetSofa3QSSF21.jpg",
+            title:"CAMDEN RYE VELVET SOFA",
+            price: 1990
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/ClaudeCognacSofa3QSSS22/$web_plp_card$/220222042856/ClaudeCognacSofa3QSSS22.jpg" ,
+            title:"CLAUDE COGNAC VELVET SOFA",
+            price: 2910
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/Strato80inBoucleSofa3QSSF21/$web_spill_item$/220222043046/Strato80inBoucleSofa3QSSF21.jpg" ,
+            title:"STRATO 80 BOUCLE SOFA",
+            price: 2990
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/AngoloChcltVelvetSofa3QSSS22/$web_plp_card$/220222042856/AngoloChcltVelvetSofa3QSSS22.jpg" ,
+            title:"ANGOLO ESPRESSO VELVET SOFA",
+            price:2490
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/BraceLeatherSofaJN21_1x1/$web_spill_item$/220222042838/BraceLeatherSofaJN21_1x1.jpg",
+            title:"BRACE LEATHER SOFA",
+            price: 3990
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/091521_marquee_bedroom_2?wid=1640&qlt=75" ,
+            title:"FIGURE IVORY BED",
+            price: 2190
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/PulloverPleatSateenQueenBedMr21/$web_spill_item$/220222074247/PulloverPleatSateenQueenBedMr21.jpg" ,
+            title:"PULLOVER PLEAT CREAM SATEEN BED",
+            price: 1490
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/091521_marquee_bedroom_1?" ,
+            title:"ANGOLO ESPRESSO VELVET bed",
+            price:4490
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/091521_marquee_bedroom_3?wid=680&qlt=75",
+            title:"CAMERANO CHOCOLATE VELVET UPHOLSTERED BED",
+            price: 1990
+        },
+    ];
+  
+
+    function fData1(){
+    data1.map(function(el){
+        div= document.createElement("div");
+
+let name =document.createElement("p");
+let image =document.createElement("img");
+let price =document.createElement("p");
+let button =document.createElement("button");
+button.innerHTML="ADD TO CART";
+button.addEventListener("click",function(){
+  addTocart(el);
+})
+
+image.src=el.image;
+name.innerText =el.title;
+price.innerText =el.price;
+
+div.append(image,name,price,button);
+
+document.querySelector("#container_furniture").append(div);
+
+});
+}
+fData1()
+ function addTocart(el){
+  console.log(el)
+   cartArr.push(el);
+   localStorage.setItem("addTocartPage",JSON.stringify(cartArr));
+   alert("Added to Cart");
+ }
+
+
+</script>
+
+<script type="module">
+ import navbar from "./components/navbar.js"
+  document.querySelector("header").innerHTML=navbar();
+
+  import footer from './components/footer.js'
+    document.querySelector("footer").innerHTML=footer();
+
+    import sidebar from "./components/sidebar.js"
+    document.getElementById("sidebar_box").innerHTML=sidebar();
+</script>
