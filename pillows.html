@@ -143,7 +143,7 @@ footer_div.innerHTML =footer();
     ]
 // console.log("data",data);
 
-var collectData =JSON.parse(localStorage.getItem("pillowData"))||[];
+
 function pillowData(){
   document.querySelector("#pillow_page").innerHTML="";
     data.map(function(el){
@@ -210,7 +210,7 @@ pillowData(data);
 
 
 
-collectData=[]
+var collectData =JSON.parse(localStorage.getItem("addTocartPage"))||[];
 function  addTocart(el){
   console.log("elll",el);
 collectData.push(el);
