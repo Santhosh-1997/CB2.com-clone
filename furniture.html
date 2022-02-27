@@ -127,7 +127,7 @@ hr{
 </body>
 </html>
 <script  >
- var cartArr= JSON.parse(localStorage.getItem("addTocartPage"))||[];
+ 
   
     var data1 =[
         {
@@ -258,13 +258,17 @@ document.querySelector("#container_furniture").append(div);
 });
 }
 fData1()
- function addTocart(el){
+ 
+
+//var cartArr= JSON.parse(localStorage.getItem("addTocartPage")) || [];
+let cartArr = [];
+function addTocart(el){
   console.log(el)
    cartArr.push(el);
    localStorage.setItem("addTocartPage",JSON.stringify(cartArr));
    alert("Added to Cart");
  }
-
+ 
 
 </script>
 
