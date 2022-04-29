@@ -3,6 +3,11 @@ This is the clone of Cb2 website. Clients can order furnitures, mirrors, pillows
 
 deployment Link:- https://cb2clone.netlify.app/
 
+![1_a-EIRzciG-u6glGKLDhQ2g](https://user-images.githubusercontent.com/97447945/165900654-1ad4f38c-2507-4605-8196-b4cdcfb1101e.png)
+
+![1_vqHxp6WXHaZcgDIlyPWzqw](https://user-images.githubusercontent.com/97447945/165900687-4a91795f-99b9-4a17-9636-af18abd6398b.png)
+
+![1_O6c2PxptT_pM7C_-pP8TPw](https://user-images.githubusercontent.com/97447945/165900715-f4636264-6248-4101-a84f-4ecbb16338a5.png)
 
 # Contributors :-
 + Abishek
