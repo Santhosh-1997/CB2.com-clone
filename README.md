@@ -1,7 +1,7 @@
 # CB2.com-clone
-This is the clone of Freshly website. Clients can order food from the website. Link of the website is given below
+This is the clone of Cb2 website. Clients can order furnitures, mirrors, pillows and other home appliances from the website. Link of the website is given below
 
-deployment Link:- https://clonefreshly.netlify.app/
+deployment Link:- https://cb2clone.netlify.app/
 
 
 # Contributers :-
